@@ -11,10 +11,15 @@ print(str(datetime.now()) + "\t>>\tStarting AFK Bot...\n")
 
 # get current mouse position
 previous_x_position, previous_y_position = pag.position()
+print(str(datetime.now()) + "\t>>\tInitial mouse position: " +
+      str(pag.position()) + "\n")
+time.sleep(5)
 
 while True:
     # current time and position of mouse
     current_x_position, current_y_position = pag.position()
+    print(str(datetime.now()) +
+          "\t>>\tCurrent mouse position: " + str(pag.position()))
 
     if (current_x_position, current_y_position) == (previous_x_position, previous_y_position):
         # get max screen size
@@ -34,5 +39,5 @@ while True:
 
     previous_x_position, previous_y_position = new_x_position, new_y_position
 
-    # sleep for 4 minutes
-    time.sleep(240)
+    # sleep for 5 minutes
+    time.sleep(300)
