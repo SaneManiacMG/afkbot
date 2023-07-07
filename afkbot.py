@@ -3,6 +3,9 @@ import random
 import time
 from datetime import datetime
 
+# turn off pyautogui fail safe
+pag.FAILSAFE = False
+
 # get current time
 print(str(datetime.now()) + "\t>>\tStarting AFK Bot...\n")
 
@@ -18,8 +21,8 @@ while True:
         width, height = pag.size()
 
         # get random x and y coordinates
-        new_x_position = current_x_position + random.randint(-50, 50)
-        new_y_position = current_y_position + random.randint(-10, 10)
+        new_x_position = current_x_position + random.randint(-250, 250)
+        new_y_position = current_y_position + random.randint(-250, 250)
 
         # move mouse to nearby random location
         pag.moveTo(new_x_position, new_y_position, duration=0.5)
