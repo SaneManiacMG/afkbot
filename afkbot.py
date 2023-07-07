@@ -18,15 +18,18 @@ while True:
         width, height = pag.size()
 
         # get random x and y coordinates
-        new_x_position = random.randint(100, width - 100)
-        new_y_position = random.randint(100, height - 100)
+        new_x_position = current_x_position + random.randint(-50, 50)
+        new_y_position = current_y_position + random.randint(-10, 10)
 
         # move mouse to nearby random location
         pag.moveTo(new_x_position, new_y_position, duration=0.5)
         print(str(datetime.now()) + "\t>>\tMoved mouse to: " +
               str(pag.position()) + "\n")
+    else:
+        new_x_position = current_x_position
+        new_y_position = current_y_position
 
-        previous_x_position, previous_y_position = new_x_position, new_y_position
+    previous_x_position, previous_y_position = new_x_position, new_y_position
 
     # sleep for 4 minutes
-    time.sleep(5)
+    time.sleep(240)
