@@ -39,5 +39,5 @@ while True:
 
     previous_x_position, previous_y_position = new_x_position, new_y_position
 
-    # sleep for 5 minutes
-    time.sleep(300)
+    # sleep for 3 minutes
+    time.sleep(180)
